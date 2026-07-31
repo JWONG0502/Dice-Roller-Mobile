@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="A mobile-friendly dice roller with multiple party modes, swipe-to-reveal dice cup interaction, and bilingual pages."
+    />
+    <title>Dice Roller</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell" aria-live="polite">
+      <header class="top-bar">
+        <div>
+          <h1 data-i18n="appTitle">Dice Roller</h1>
+          <p data-i18n="subtitle">Pick a mode and roll your luck</p>
+        </div>
+        <div class="top-actions">
+          <button class="icon-button" id="languageButton" type="button" aria-label="Switch language">
+            中
+          </button>
+          <button class="icon-button sound-button" id="soundButton" type="button" aria-label="Toggle sound">
+            Sound
+          </button>
+        </div>
+      </header>
+
+      <nav class="mode-tabs" id="modeTabs" aria-label="Dice modes"></nav>
+
+      <section class="hero-panel" id="heroPanel" aria-label="Dice cup">
+        <div class="tray-preview" id="trayPreview" aria-hidden="true"></div>
+        <div class="cup-wrap" id="cupWrap" role="button" tabindex="0" aria-label="Reveal dice">
+          <div class="dice-cup" aria-hidden="true">
+            <span></span>
+          </div>
+        </div>
+        <p class="hero-status" id="heroStatus">Tap Roll Dice</p>
+      </section>
+
+      <section class="controls-panel" id="controlsPanel"></section>
+
+      <button class="primary-button" id="rollButton" type="button">Roll Dice</button>
+
+      <section class="result-panel" id="resultPanel" aria-label="Result">
+        <div class="empty-state">
+          <div class="placeholder-dice" aria-hidden="true"></div>
+          <div class="placeholder-dice" aria-hidden="true"></div>
+          <p data-i18n="tapToRoll">Tap Roll Dice</p>
+        </div>
+      </section>
+
+      <footer class="footer-note" id="footerNote">
+        <p data-i18n="entertainmentNote">Random result for fun only</p>
+      </footer>
+
+      <nav class="static-links" id="staticLinks" aria-label="Site links">
+        <a href="./about.html" data-i18n="about">About</a>
+        <a href="./contact.html" data-i18n="contact">Contact</a>
+        <a href="./privacy.html" data-i18n="privacyPolicy">Privacy Policy</a>
+      </nav>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
